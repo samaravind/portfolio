@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  distDir: ".next-preview",
   devIndicators: false,
   /* config options here */
   experimental: {
