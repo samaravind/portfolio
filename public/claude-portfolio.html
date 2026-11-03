@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sam Aravind R — Full-Stack & AI Developer</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f4f5fb;--fg:#12142a;--mut:#555a78;--card:rgba(255,255,255,.7);--line:rgba(80,70,200,.2);--a:#5b3df5;--b:#0aa5c9}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#07081a;--fg:#eef0ff;--mut:#9aa0c8;--card:rgba(20,22,50,.6);--line:rgba(140,130,255,.25);--a:#8b7bff;--b:#38e1ff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#07081a;--fg:#eef0ff;--mut:#9aa0c8;--card:rgba(20,22,50,.6);--line:rgba(140,130,255,.25);--a:#8b7bff;--b:#38e1ff;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+body{background:linear-gradient(135deg,#f4f5fb 0%,#eaf3ff 52%,#f8edff 100%);color:var(--fg);font-family:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;line-height:1.6;overflow-x:hidden}
+#bg{position:fixed;inset:0;z-index:0;width:100%;height:100%}
+main,nav,footer{position:relative;z-index:1}
+nav{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:calc(14px + env(safe-area-inset-top,0px)) 5vw 14px;backdrop-filter:blur(18px);background:linear-gradient(90deg,#ffffffdf,#eef4ffdf,#f7efffdf);border-bottom:1px solid #d8dff0}
+nav b{letter-spacing:.12em;font-size:.9rem}
+nav div{display:flex;gap:18px;font-size:.85rem}
+nav a{color:var(--mut);text-decoration:none}nav a:hover{color:var(--fg)}
+@media(max-width:620px){nav div a:nth-child(n+4){display:none}}
+section{min-height:100vh;padding:110px 6vw 60px;max-width:1150px;margin:auto}
+.hero{display:flex;flex-direction:column;justify-content:center;min-height:100vh}
+.tag{color:var(--b);letter-spacing:.3em;font-size:.78rem;text-transform:uppercase}
+h1{font-size:clamp(2.6rem,9vw,6.4rem);line-height:1;margin:14px 0;font-weight:800;letter-spacing:-.03em}
+h1{transform-style:preserve-3d;filter:drop-shadow(0 14px 20px rgba(90,70,240,.35));transition:transform .2s}
+h1 span{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{max-width:560px;color:var(--mut);font-size:1.1rem}
+.cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 24px;border-radius:99px;border:1px solid var(--line);color:var(--fg);text-decoration:none;font-weight:600;background:var(--card);transition:transform .25s}
+.btn.p{background:linear-gradient(90deg,var(--a),var(--b));color:#fff;border:0}
+.btn:hover{transform:translateY(-3px) scale(1.04)}
+h2{font-size:clamp(1.8rem,5vw,3rem);margin-bottom:34px}
+h2 small{display:block;color:var(--b);font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;margin-bottom:6px}
+.reveal{opacity:0;transform:translateY(50px) rotateX(12deg);transition:all .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;perspective:1200px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;backdrop-filter:blur(12px);transform-style:preserve-3d;transition:transform .15s,box-shadow .3s;will-change:transform}
+.card:hover{box-shadow:0 30px 60px -20px var(--a)}
+.card h3{font-size:1.2rem;transform:translateZ(30px)}
+.card .m{color:var(--b);font-size:.82rem;margin:4px 0 12px;transform:translateZ(20px)}
+.card li{margin:0 0 8px 18px;color:var(--mut);font-size:.95rem;transform:translateZ(10px)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips i{font-style:normal;font-size:.78rem;padding:4px 12px;border-radius:99px;border:1px solid var(--line);color:var(--fg)}
+.tl{position:relative;padding-left:28px;border-left:2px solid var(--line);display:grid;gap:22px}
+.tl .card::before{content:"";position:absolute;left:-39px;top:30px;width:16px;height:16px;border-radius:50%;background:linear-gradient(var(--a),var(--b));box-shadow:0 0 18px var(--a)}
+.tl .card{position:relative}
+.orbit{height:300px;perspective:900px;display:flex;align-items:center;justify-content:center;margin:20px 0 10px}
+.ring{position:relative;width:150px;height:60px;transform-style:preserve-3d;animation:spin 26s linear infinite}
+.orbit:hover .ring{animation-play-state:paused}
+.ring span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border-radius:14px;border:1px solid var(--line);background:var(--card);backdrop-filter:blur(8px);font-weight:700;font-size:.9rem;color:var(--fg)}
+@keyframes spin{to{transform:rotateX(-12deg) rotateY(360deg)}}
+.ring{transform:rotateX(-12deg)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.skills .card h3{font-size:.8rem;color:var(--b);letter-spacing:.15em;text-transform:uppercase}
+.skills .card p{margin-top:8px;font-size:.95rem;color:var(--mut);transform:translateZ(10px)}
+.edu b{font-size:1.5rem;color:var(--a)}
+.contact{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.contact h2{font-size:clamp(2.2rem,8vw,5rem)}
+footer{text-align:center;padding:30px;color:var(--mut);font-size:.8rem}
+@media(prefers-reduced-motion:reduce){.ring{animation:none}.reveal{transition:none}}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<nav><b>SAM ARAVIND</b><div><a href="#about">About</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+<main>
+<section class="hero">
+  <div class="tag">Full-Stack Web Developer · AI Developer</div>
+  <h1>Sam<br><span>Aravind R</span></h1>
+  <p class="sub">AI &amp; Data Science graduate building practical software and AI solutions with Python, Next.js and FastAPI.</p>
+  <div class="cta"><a class="btn p" href="#projects">View Projects</a><a class="btn" href="#contact">Get in Touch</a></div>
+</section>
+
+<section id="about">
+  <h2 class="reveal"><small>About</small>Practical software, backed by AI.</h2>
+  <div class="grid">
+    <div class="card reveal"><h3>Profile</h3><p class="m">Trichy, Tamil Nadu</p><p style="color:var(--mut)">AI and Data Science graduate with experience in software development and AI-focused project work. Skilled in Python, full-stack web application development, and data-processing tools.</p></div>
+    <div class="card reveal edu"><h3>Education</h3><p class="m">B.E. Artificial Intelligence and Data Science</p><p style="color:var(--mut)">K. Ramakrishnan College of Technology, Samayapuram</p><p style="margin-top:10px"><b>6.99</b> <span style="color:var(--mut)">CGPA</span></p><div class="chips"><i>HSC – Computer Science</i><i>SSLC – CBSE</i></div></div>
+  </div>
+</section>
+
+<section id="work">
+  <h2 class="reveal"><small>Experience</small>Where I've worked</h2>
+  <div class="tl">
+    <div class="card reveal"><h3>AI Developer — AIVIDA</h3><p class="m">January 2026 – Present</p><ul><li>Contribute to AI-focused development tasks and application workflows.</li><li>Support implementation, testing, debugging, and improvement of project features.</li><li>Collaborate on assigned technical tasks following project requirements.</li></ul></div>
+    <div class="card reveal"><h3>Developer — Kosal IT Solution</h3><p class="m">March 2025 – December 2025</p><ul><li>Worked on assigned software development tasks and project activities.</li><li>Supported implementation and testing of features based on project requirements.</li><li>Built practical development experience through day-to-day technical work.</li></ul></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="reveal"><small>Projects</small>Things I've built</h2>
+  <div class="grid">
+    <div class="card reveal"><h3>Fixx Market</h3><p class="m">Full-Stack E-Commerce Web Application</p><ul><li>Responsive e-commerce platform using Next.js, Python FastAPI, Convex and Clerk authentication.</li><li>Product browsing, category pages, wishlist, cart and checkout UI.</li><li>FastAPI services for cart, wishlist and order APIs.</li><li>Authenticated user-based data access, checkout validation, delivery address capture, payment selection and order creation.</li></ul><div class="chips"><i>Next.js</i><i>FastAPI</i><i>Convex</i><i>Clerk</i></div></div>
+    <div class="card reveal"><h3>Keystroke Security Study</h3><p class="m">Academic / Research Project</p><ul><li>Research-focused project on keystroke-capture mechanisms and security concepts.</li><li>Explored how such mechanisms work in order to understand security risks.</li></ul><div class="chips"><i>Python</i><i>Security</i><i>Research</i></div></div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="reveal"><small>Skills</small>My toolkit</h2>
+  <div class="orbit reveal"><div class="ring" id="ring"></div></div>
+  <div class="skills">
+    <div class="card reveal"><h3>Programming</h3><p>Python, TypeScript, JavaScript</p></div>
+    <div class="card reveal"><h3>Libraries &amp; Frameworks</h3><p>NumPy, SciPy, NLTK, Matplotlib, TensorFlow, Keras, Pandas, Flask, FastAPI</p></div>
+    <div class="card reveal"><h3>Web</h3><p>Next.js, React, Tailwind CSS</p></div>
+    <div class="card reveal"><h3>Data &amp; Auth</h3><p>Python FastAPI, Convex, Clerk authentication</p></div>
+    <div class="card reveal"><h3>Workshops</h3><p>Big Data Analytics, Ethical Hacking</p></div>
+    <div class="card reveal"><h3>Interest</h3><p>Video Editing</p></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="tag reveal">Let's talk</div>
+  <h2 class="reveal">Let's build<br><span style="color:var(--a)">something real.</span></h2>
+  <div class="cta reveal"><a class="btn p" href="mailto:samaravind.vvv@gmail.com">Email Me</a><a class="btn" href="tel:+916383285431">+91 63832 85431</a></div>
+</section>
+</main>
+<footer>© 2026 Sam Aravind R · Trichy, Tamil Nadu</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+var skills=["Python","TypeScript","JavaScript","Next.js","React","Tailwind","FastAPI","TensorFlow","Keras","Pandas","NumPy","Convex"];
+var ring=document.getElementById('ring');
+skills.forEach(function(s,i){var e=document.createElement('span');e.textContent=s;e.style.transform='rotateY('+(i*360/skills.length)+'deg) translateZ(230px)';ring.appendChild(e)});
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+document.querySelectorAll('.card').forEach(function(c){
+ c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='rotateY('+x*14+'deg) rotateX('+(-y*14)+'deg) translateZ(10px)'});
+ c.addEventListener('mouseleave',function(){c.style.transform=''});
+});
+var h1=document.querySelector('.hero h1');
+addEventListener('mousemove',function(e){var x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;h1.style.transform='perspective(900px) rotateY('+x*12+'deg) rotateX('+(-y*10)+'deg)'});
+try{
+ var cv=document.getElementById('bg'),r=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
+ r.setPixelRatio(Math.min(devicePixelRatio,2));
+ var sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(55,1,.1,100);cam.position.z=9;
+ sc.add(new THREE.AmbientLight(0x8890ff,.7));
+ var l1=new THREE.PointLight(0x8b7bff,2.2,50);l1.position.set(5,5,6);sc.add(l1);
+ var l2=new THREE.PointLight(0x22d3ee,2.2,50);l2.position.set(-6,-3,4);sc.add(l2);
+ var grp=new THREE.Group();sc.add(grp);
+ var gem=new THREE.Mesh(new THREE.IcosahedronGeometry(1.4,0),new THREE.MeshStandardMaterial({color:0x5b3df5,metalness:.55,roughness:.28,flatShading:true}));
+ var wire=new THREE.Mesh(new THREE.IcosahedronGeometry(1.85,1),new THREE.MeshBasicMaterial({color:0x22d3ee,wireframe:true,transparent:true,opacity:.22}));
+ grp.add(gem,wire);
+ var pivots=[];
+ [[2.7,.4,0,.9],[3.4,-.7,1.1,-.7],[4.1,.9,2.2,.5]].forEach(function(d,i){
+  var c=i%2?0x22d3ee:0x8b7bff,tilt=new THREE.Group(),pv=new THREE.Group();
+  tilt.rotation.set(d[1],d[2],0);
+  tilt.add(new THREE.Mesh(new THREE.TorusGeometry(d[0],.012,8,140),new THREE.MeshBasicMaterial({color:c,transparent:true,opacity:.5})));
+  var s=new THREE.Mesh(new THREE.SphereGeometry(.15,18,18),new THREE.MeshStandardMaterial({color:0xffffff,emissive:c,emissiveIntensity:.9}));
+  s.position.x=d[0];pv.add(s);tilt.add(pv);grp.add(tilt);pivots.push([pv,d[3]]);
+ });
+ var bits=[];
+ for(var i=0;i<14;i++){var m=new THREE.Mesh(new THREE.OctahedronGeometry(.18+Math.random()*.2),new THREE.MeshStandardMaterial({color:i%2?0x22d3ee:0x8b7bff,metalness:.5,roughness:.3,flatShading:true}));
+  m.position.set((Math.random()-.5)*20,(Math.random()-.5)*14,-2-Math.random()*8);m.userData.s=.2+Math.random()*.6;sc.add(m);bits.push(m)}
+ var n=700,p=new Float32Array(n*3);for(i=0;i<n*3;i++)p[i]=(Math.random()-.5)*34;
+ var g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(p,3));
+ var pts=new THREE.Points(g,new THREE.PointsMaterial({color:0x22d3ee,size:.04,transparent:true,opacity:.7}));sc.add(pts);
+ var P=[[3.2,0,0,1],[-3.3,0,-1,.9],[3.3,0,-2,.85],[-3.3,0,-1,.9],[0,-.3,-5,1.1],[0,0,1.5,1]],
+ mx=0,my=0,sy=0,cur=[3.2,0,0,1],wide=true;
+ addEventListener('mousemove',function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+ addEventListener('scroll',function(){sy=scrollY/Math.max(1,document.body.scrollHeight-innerHeight)});
+ function rs(){r.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();wide=innerWidth>800}
+ addEventListener('resize',rs);rs();
+ var t=0;(function loop(){t+=.01;
+  var f=sy*(P.length-1),k0=Math.min(P.length-2,Math.floor(f)),k=f-k0;k=k*k*(3-2*k);
+  for(var j=0;j<4;j++){var tg=P[k0][j]+(P[k0+1][j]-P[k0][j])*k;if(!wide){if(j==0)tg=0;if(j==1)tg=2.4;if(j==3)tg*=.62}cur[j]+=(tg-cur[j])*.06}
+  grp.position.set(cur[0],cur[1]+Math.sin(t*2)*.25,cur[2]);grp.scale.setScalar(cur[3]);
+  gem.rotation.x=t*.7;gem.rotation.y=t*.9;wire.rotation.y=-t*.5;wire.rotation.z=t*.3;
+  pivots.forEach(function(q){q[0].rotation.z+=.012*q[1]});
+  grp.rotation.y+=(mx*1.1+sy*3-grp.rotation.y)*.04;grp.rotation.x+=(my*.9-grp.rotation.x)*.04;
+  bits.forEach(function(b){b.rotation.x+=.006*b.userData.s*3;b.rotation.y+=.008*b.userData.s*3;b.position.y+=Math.sin(t*b.userData.s*4+b.position.x)*.003});
+  pts.rotation.y=t*.04+sy*1.5;
+  cam.position.x+=(mx*1.6-cam.position.x)*.04;cam.position.y+=(-my*1.2-cam.position.y)*.04;cam.lookAt(0,0,0);
+  r.render(sc,cam);requestAnimationFrame(loop)})();
+}catch(e){}
+})();
+</script>
+</body>
+</html>
