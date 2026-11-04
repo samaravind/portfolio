@@ -6,37 +6,35 @@
 <title>Sam Aravind R — Full-Stack & AI Developer</title>
 <style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
---bg:#f4f5fb;--fg:#12142a;--mut:#555a78;--card:rgba(255,255,255,.7);--line:rgba(80,70,200,.2);--a:#5b3df5;--b:#0aa5c9}
+--bg:#f7f9fc;--fg:#12263f;--mut:#5c6d80;--card:#ffffff;--line:#dbe4ee;--a:#1d5f9f;--b:#0d8da3}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#07081a;--fg:#eef0ff;--mut:#9aa0c8;--card:rgba(20,22,50,.6);--line:rgba(140,130,255,.25);--a:#8b7bff;--b:#38e1ff;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#07081a;--fg:#eef0ff;--mut:#9aa0c8;--card:rgba(20,22,50,.6);--line:rgba(140,130,255,.25);--a:#8b7bff;--b:#38e1ff;color-scheme:dark}
 *{box-sizing:border-box;margin:0}
-body{background:linear-gradient(135deg,#f4f5fb 0%,#eaf3ff 52%,#f8edff 100%);color:var(--fg);font-family:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;line-height:1.6;overflow-x:hidden}
+body{background:linear-gradient(135deg,#f8fafc 0%,#eef4f9 58%,#f7fbfd 100%);color:var(--fg);font-family:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;line-height:1.6;overflow-x:hidden}
 #bg{position:fixed;inset:0;z-index:0;width:100%;height:100%}
 main,nav,footer{position:relative;z-index:1}
-nav{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:calc(14px + env(safe-area-inset-top,0px)) 5vw 14px;backdrop-filter:blur(18px);background:linear-gradient(90deg,#ffffffdf,#eef4ffdf,#f7efffdf);border-bottom:1px solid #d8dff0}
+nav{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) 5vw 16px;background:#ffffffee;border-bottom:1px solid var(--line);box-shadow:0 4px 18px #1736520d}
 nav b{letter-spacing:.12em;font-size:.9rem}
 nav div{display:flex;gap:18px;font-size:.85rem}
-nav a{color:var(--mut);text-decoration:none}nav a:hover{color:var(--fg)}
+nav a{color:#53677d;text-decoration:none}nav a:hover{color:var(--a)}
 @media(max-width:620px){nav div a:nth-child(n+4){display:none}}
 section{min-height:100vh;padding:110px 6vw 60px;max-width:1150px;margin:auto}
 .hero{display:flex;flex-direction:column;justify-content:center;min-height:100vh}
 .tag{color:var(--b);letter-spacing:.3em;font-size:.78rem;text-transform:uppercase}
 h1{font-size:clamp(2.6rem,9vw,6.4rem);line-height:1;margin:14px 0;font-weight:800;letter-spacing:-.03em}
-h1{transform-style:preserve-3d;filter:drop-shadow(0 14px 20px rgba(90,70,240,.35));transition:transform .2s}
-h1 span{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+h1{transform-style:preserve-3d;filter:drop-shadow(0 10px 18px rgba(29,95,159,.16));transition:transform .2s}
+h1 span{color:var(--a)}
 .sub{max-width:560px;color:var(--mut);font-size:1.1rem}
 .cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:12px 24px;border-radius:99px;border:1px solid var(--line);color:var(--fg);text-decoration:none;font-weight:600;background:var(--card);transition:transform .25s}
-.btn.p{background:linear-gradient(90deg,var(--a),var(--b));color:#fff;border:0}
-.btn:hover{transform:translateY(-3px) scale(1.04)}
+.btn{padding:12px 20px;border-radius:6px;border:1px solid #c9d8e6;color:var(--fg);text-decoration:none;font-weight:600;background:#fff;transition:transform .25s,box-shadow .25s,background .25s}
+.btn.p{background:var(--a);color:#fff;border-color:var(--a);box-shadow:0 6px 0 #b8cce0}
+.btn:hover{transform:translateY(-2px);box-shadow:0 7px 18px #17365218}
 h2{font-size:clamp(1.8rem,5vw,3rem);margin-bottom:34px}
 h2 small{display:block;color:var(--b);font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;margin-bottom:6px}
 .reveal{opacity:0;transform:translateY(50px) rotateX(12deg);transition:all .9s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;perspective:1200px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;backdrop-filter:blur(12px);transform-style:preserve-3d;transition:transform .15s,box-shadow .3s;will-change:transform}
-.card:hover{box-shadow:0 30px 60px -20px var(--a)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px;box-shadow:0 12px 30px #1736520c;transform-style:preserve-3d;transition:transform .15s,box-shadow .3s;will-change:transform}
+.card:hover{box-shadow:0 18px 34px #17365218}
 .card h3{font-size:1.2rem;transform:translateZ(30px)}
 .card .m{color:var(--b);font-size:.82rem;margin:4px 0 12px;transform:translateZ(20px)}
 .card li{margin:0 0 8px 18px;color:var(--mut);font-size:.95rem;transform:translateZ(10px)}
@@ -69,7 +67,7 @@ footer{text-align:center;padding:30px;color:var(--mut);font-size:.8rem}
   <div class="tag">Full-Stack Web Developer · AI Developer</div>
   <h1>Sam<br><span>Aravind R</span></h1>
   <p class="sub">AI &amp; Data Science graduate building practical software and AI solutions with Python, Next.js and FastAPI.</p>
-  <div class="cta"><a class="btn p" href="#projects">View Projects</a><a class="btn" href="#contact">Get in Touch</a></div>
+  <div class="cta"><a class="btn p" href="#projects">View Projects</a><a class="btn" href="#contact">Get in Touch</a><a class="btn" href="/Sam-Aravind-Resume.pdf" download>Download Resume</a></div>
 </section>
 
 <section id="about">
